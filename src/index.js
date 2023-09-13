@@ -147,6 +147,7 @@ class App extends React.Component {
                   className="btn"
                   style={inputStyle}
                   target="_blank"
+                  rel="opener"
                 >
                   <i className="fa fa-twitter"></i>
                 </a>
@@ -156,6 +157,7 @@ class App extends React.Component {
                   className="btn"
                   style={inputStyle}
                   target="_blank"
+                  rel="opener"
                 >
                   <i className="fa fa-tumblr"></i>
                 </a>
