@@ -118,6 +118,16 @@ class App extends React.Component {
 
   render() {
     let inputStyle = { backgroundColor: `${this.state.color}` };
+    let hrefTwitter =
+      "https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=" +
+      encodeURIComponent('"' + this.state.quote + '" ' + this.state.author);
+    let hreftumb =
+      "https://www.tumblr.com/widgets/share/tool?posttype=quote&tags=quotes,freecodecamp&caption=" +
+      encodeURIComponent(this.state.author) +
+      "&content=" +
+      encodeURIComponent(this.state.quote) +
+      "&canonicalUrl=https%3A%2F%2Fwww.tumblr.com%2Fbuttons&shareSource=tumblr_share_button";
+
     return (
       <main className="custom-container" style={inputStyle}>
         <div className="box-container">
@@ -131,10 +141,22 @@ class App extends React.Component {
             </p>
             <div className="bottom-container d-flex justify-content-between">
               <div className="link-container d-flex justify-content-between">
-                <a href="#" id="tweet-quote" className="btn" style={inputStyle}>
+                <a
+                  href={hrefTwitter}
+                  id="tweet-quote"
+                  className="btn"
+                  style={inputStyle}
+                  target="_blank"
+                >
                   <i className="fa fa-twitter"></i>
                 </a>
-                <a href="#" id="tumblr" className="btn" style={inputStyle}>
+                <a
+                  href={hreftumb}
+                  id="tumblr"
+                  className="btn"
+                  style={inputStyle}
+                  target="_blank"
+                >
                   <i className="fa fa-tumblr"></i>
                 </a>
               </div>
